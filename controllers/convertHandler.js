@@ -1,7 +1,7 @@
 function ConvertHandler() {
   this.getNum = function (input) {
     let result = input.slice(0, input.search(/[a-z]/i));
-    if (/\/\d*\//g.test(result)) {
+    if (/\/.*\//g.test(result)) {
       return "invalid number";
     }
     if (result == "" || result == null) {
