@@ -108,8 +108,8 @@ function ConvertHandler() {
     } else if (returnUnit == "invalid unit") {
       return "invalid unit";
     } else {
-      let returnUnitString = spellOutUnit(returnUnit);
-      let initUnitString = spellOutUnit(initUnit);
+      let returnUnitString = this.spellOutUnit(returnUnit);
+      let initUnitString = this.spellOutUnit(initUnit);
       return `${initNum} ${initUnitString} converts to ${returnNum} ${returnUnitString}`;
     }
   };
