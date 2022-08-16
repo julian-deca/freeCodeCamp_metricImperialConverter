@@ -110,10 +110,10 @@ function ConvertHandler() {
     } else {
       let returnUnitString = this.spellOutUnit(returnUnit);
       let initUnitString = this.spellOutUnit(initUnit);
-      return `${initNum.toFixed(
-        5
-      )} ${initUnitString} converts to ${returnNum.toFixed(
-        5
+      return `${parseFloat(
+        initNum.toFixed(5)
+      )} ${initUnitString} converts to ${parseFloat(
+        returnNum.toFixed(5)
       )} ${returnUnitString}`;
     }
   };

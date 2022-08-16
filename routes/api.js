@@ -26,9 +26,9 @@ module.exports = function (app) {
       res.send("invalid unit");
     } else {
       res.json({
-        initNum: initNum.toFixed(5),
+        initNum: parseFloat(initNum.toFixed(5)),
         initUnit: initUnit,
-        returnNum: returnNum.toFixed(5),
+        returnNum: parseFloat(returnNum.toFixed(5)),
         returnUnit: returnUnit,
         string: string,
       });

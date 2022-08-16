@@ -22,7 +22,7 @@ suite("Unit Tests", function () {
       assert.equal(convertHandler.getNum("10/2/3mi"), "invalid number");
     });
     test("#default 1", () => {
-      assert.equal(convertHandler.getNum(), 1);
+      assert.equal(convertHandler.getNum("mi"), 1);
     });
   });
   suite("Units Tests", function () {
