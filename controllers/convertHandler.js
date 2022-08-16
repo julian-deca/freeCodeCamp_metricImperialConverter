@@ -1,11 +1,11 @@
 function ConvertHandler() {
-  this.getNum = function (input = "1") {
-    if (input == "1") {
-      return 1;
-    }
+  this.getNum = function (input) {
     let result = input.slice(0, input.search(/[a-z]/i));
     if (/\/\d*\//g.test(result)) {
       return "invalid number";
+    }
+    if (result == "" || result == null) {
+      return 1;
     }
 
     return Number(eval(result));
@@ -110,7 +110,11 @@ function ConvertHandler() {
     } else {
       let returnUnitString = this.spellOutUnit(returnUnit);
       let initUnitString = this.spellOutUnit(initUnit);
-      return `${initNum} ${initUnitString} converts to ${returnNum} ${returnUnitString}`;
+      return `${initNum.toFixed(
+        5
+      )} ${initUnitString} converts to ${returnNum.toFixed(
+        5
+      )} ${returnUnitString}`;
     }
   };
 }
